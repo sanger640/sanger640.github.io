@@ -37,7 +37,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-robot-manipulation-problem",
+            },{id: "post-what-and-why-lyapunov-functions",
+        
+          title: "What and Why? Lyapunov Functions",
+        
+        description: "Explain what Lyapunov functions are, how they are computed and what are possible use cases for them in robotics.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/lyap/";
+          
+        },
+      },{id: "post-robot-manipulation-problem",
         
           title: "Robot Manipulation Problem",
         
