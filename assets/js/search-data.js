@@ -23,11 +23,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-what-and-why-lyapunov-functions",
+        },{id: "post-safety-filters-in-robotics",
         
-          title: "What and Why? Lyapunov Functions",
+          title: "Safety Filters in Robotics",
         
-        description: "Explain what Lyapunov functions are, how they are computed and what are possible use cases for them in robotics.",
+        description: "Summary of existing approaches to gurantee safety in robotic systems.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/safe/";
+          
+        },
+      },{id: "post-lyapunov-functions-foundation-of-nonlinear-system-analyis",
+        
+          title: "Lyapunov Functions, foundation of nonlinear system analyis.",
+        
+        description: "History of Lyapunov Functions and applications to control theory and robotics.",
         section: "Posts",
         handler: () => {
           
