@@ -34,6 +34,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/safe/";
           
         },
+      },{id: "post-safe-robotics-handling-and-manipulating-liquids",
+        
+          title: "Safe Robotics - Handling and Manipulating Liquids",
+        
+        description: "Carrying and pouring open containers with liquid without spillage using robot manipulation.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/liquid/";
+          
+        },
       },{id: "post-lyapunov-functions-foundation-of-nonlinear-system-analyis",
         
           title: "Lyapunov Functions, foundation of nonlinear system analyis.",
