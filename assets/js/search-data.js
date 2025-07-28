@@ -34,6 +34,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/safe/";
           
         },
+      },{id: "post-optimal-control-overview",
+        
+          title: "Optimal Control Overview",
+        
+        description: "Overview of the optimal control framework and insights into LQR and MPC",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/optc/";
+          
+        },
       },{id: "post-safe-robotics-handling-and-manipulating-liquids",
         
           title: "Safe Robotics - Handling and Manipulating Liquids",
