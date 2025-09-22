@@ -56,6 +56,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/liquid/";
           
         },
+      },{id: "post-variational-inference",
+        
+          title: "Variational Inference",
+        
+        description: "Introduction to how Generative models work",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/elbo/";
+          
+        },
       },{id: "post-lyapunov-functions-foundation-of-nonlinear-system-analyis",
         
           title: "Lyapunov Functions, foundation of nonlinear system analyis.",
