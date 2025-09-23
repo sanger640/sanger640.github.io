@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-safety-filters-in-robotics",
+        },{id: "post-variational-inference",
+        
+          title: "Variational Inference",
+        
+        description: "Introduction to how Generative models work",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/elbo/";
+          
+        },
+      },{id: "post-safety-filters-in-robotics",
         
           title: "Safety Filters in Robotics",
         
@@ -54,17 +65,6 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/liquid/";
-          
-        },
-      },{id: "post-variational-inference",
-        
-          title: "Variational Inference",
-        
-        description: "Introduction to how Generative models work",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/elbo/";
           
         },
       },{id: "post-lyapunov-functions-foundation-of-nonlinear-system-analyis",
