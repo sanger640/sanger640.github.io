@@ -23,9 +23,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-world-models",
+        },{id: "post-policy-optimization-and-actor-critic-methods",
         
-          title: "World Models",
+          title: "Policy Optimization and Actor Critic Methods",
         
         description: "",
         section: "Posts",
