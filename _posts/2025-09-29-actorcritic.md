@@ -1,7 +1,7 @@
 ---
 layout: distill
-title: World Models
-date: 2025-09-28
+title: Policy Optimization and Actor Critic Methods
+date: 2025-09-29
 description: 
 tags: representation learning
 categories: explanation
