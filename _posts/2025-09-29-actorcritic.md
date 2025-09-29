@@ -87,3 +87,9 @@ $$\theta_{i+1} \leftarrow \theta_i + \alpha \frac{1}{m} \sum_{k=1}^{m} \sum_{t=0
     $$\phi_{i+1} \leftarrow \min_\phi \sum_{(s,u,s',r)} \|\hat{Q}_i(s,u) - V_\phi^\pi(s)\|_2^2 + \kappa\|\phi - \phi_i\|_2^2$$
     $$\theta_{i+1} \leftarrow \theta_i + \alpha \frac{1}{m} \sum_{k=1}^{m} \sum_{t=0}^{H-1} \nabla_\theta \log \pi_\theta(u_t^{(k)}|s_t^{(k)}) \left( \hat{Q}_i(s_t^{(k)}, u_t^{(k)}) - V_{\phi_i}^\pi(s_t^{(k)}) \right)$$
 
+<div class="d-flex flex-column align-items-center mt-3">
+    {% include figure.liquid loading="eager" path="assets/img/actor_critic.png" class="rounded z-depth-1" zoomable=true %}
+    <div class="caption mt-2" style="max-width: 100%; text-align: center;">
+        Figure 1: Actor-Critic Algorithm.
+    </div>
+</div>
