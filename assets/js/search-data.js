@@ -31,6 +31,17 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
+            window.location.href = "/blog/2025/actorcritic/";
+          
+        },
+      },{id: "post-world-models",
+        
+          title: "World Models",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
             window.location.href = "/blog/2025/dreamer/";
           
         },
