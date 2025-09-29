@@ -76,16 +76,19 @@ $$ \nabla_\theta log P (\tau^i; \theta) = \sum_{t=0}^H\nabla_\theta log \pi_\the
     - approximate average reward by some steps of reward plus value function from that timestep onwards
 - Trading off for low variance and introducing high-bias, can to n-step estimate (similar to TD (lambda)).
 - Gradient estimate for $V$:
+
 $$\phi_{i+1} \leftarrow \min_\phi \sum_{(s,u,s',r)} \|\hat{Q}_i(s,u) - V_\phi^\pi(s)\|_2^2 + \kappa\|\phi - \phi_i\|_2^2$$
+
 - Gradient estimate for $\pi$:
+
 $$\theta_{i+1} \leftarrow \theta_i + \alpha \frac{1}{m} \sum_{k=1}^{m} \sum_{t=0}^{H-1} \nabla_\theta \log \pi_\theta(u_t^{(k)}|s_t^{(k)}) \left( \hat{Q}_i(s_t^{(k)}, u_t^{(k)}) - V_{\phi_i}^\pi(s_t^{(k)}) \right)$$
 
 ### General structure of algorithm:
 1. Init $\pi_{\theta_0}, V^\pi_{\phi_0}$
 2. Collect Rollouts ${s, u, s', r}$ and $\hat{Q}_i(s,u)$
 3. Update :
-    $$\phi_{i+1} \leftarrow \min_\phi \sum_{(s,u,s',r)} \|\hat{Q}_i(s,u) - V_\phi^\pi(s)\|_2^2 + \kappa\|\phi - \phi_i\|_2^2$$
-    $$\theta_{i+1} \leftarrow \theta_i + \alpha \frac{1}{m} \sum_{k=1}^{m} \sum_{t=0}^{H-1} \nabla_\theta \log \pi_\theta(u_t^{(k)}|s_t^{(k)}) \left( \hat{Q}_i(s_t^{(k)}, u_t^{(k)}) - V_{\phi_i}^\pi(s_t^{(k)}) \right)$$
+    - $$\phi_{i+1} \leftarrow \min_\phi \sum_{(s,u,s',r)} \|\hat{Q}_i(s,u) - V_\phi^\pi(s)\|_2^2 + \kappa\|\phi - \phi_i\|_2^2$$
+    - $$\theta_{i+1} \leftarrow \theta_i + \alpha \frac{1}{m} \sum_{k=1}^{m} \sum_{t=0}^{H-1} \nabla_\theta \log \pi_\theta(u_t^{(k)}|s_t^{(k)}) \left( \hat{Q}_i(s_t^{(k)}, u_t^{(k)}) - V_{\phi_i}^\pi(s_t^{(k)}) \right)$$
 
 <div class="d-flex flex-column align-items-center mt-3">
     {% include figure.liquid loading="eager" path="assets/img/actor_critic.png" class="rounded z-depth-1" zoomable=true %}
