@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-variational-inference",
+        },{id: "post-world-models",
+        
+          title: "World Models",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/dreamer/";
+          
+        },
+      },{id: "post-variational-inference",
         
           title: "Variational Inference",
         
