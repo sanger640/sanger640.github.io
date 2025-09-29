@@ -44,7 +44,7 @@ $$ \nabla_\theta log P (\tau^i; \theta) = \sum_{t=0}^H\nabla_\theta log \pi_\the
 - Get gradients from backpropagration, do rollouts and estimate $\hat{g}$
 - But estimates unbiased but very noisy
 
-## Actor - Critic
+## Actor-Critic Methods
 - Modification to Policy Optimizations that make it actor-critic
 
 ### Baseline subtraction
