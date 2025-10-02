@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-policy-optimization-and-actor-critic-methods",
+        },{id: "post-hamilton-jacobi-reachability",
+        
+          title: "Hamilton Jacobi Reachability",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/hj/";
+          
+        },
+      },{id: "post-policy-optimization-and-actor-critic-methods",
         
           title: "Policy Optimization and Actor Critic Methods",
         
