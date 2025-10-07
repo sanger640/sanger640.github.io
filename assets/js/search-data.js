@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-hamilton-jacobi-reachability",
+        },{id: "post-direct-collocation",
+        
+          title: "Direct Collocation",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/dc/";
+          
+        },
+      },{id: "post-hamilton-jacobi-reachability",
         
           title: "Hamilton Jacobi Reachability",
         
