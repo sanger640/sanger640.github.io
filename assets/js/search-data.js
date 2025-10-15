@@ -23,7 +23,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-direct-collocation",
+        },{id: "post-optimization-ii",
+        
+          title: "Optimization II",
+        
+        description: "Linear Programming",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/opt2/";
+          
+        },
+      },{id: "post-optimization-i",
+        
+          title: "Optimization I",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/opt/";
+          
+        },
+      },{id: "post-direct-collocation",
         
           title: "Direct Collocation",
         
@@ -31,7 +53,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/dc/";
+            window.location.href = "/blog/2025/dc-copy/";
           
         },
       },{id: "post-hamilton-jacobi-reachability",
