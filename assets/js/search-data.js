@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-optimization-ii",
+        },{id: "post-time-reversibility",
+        
+          title: "Time Reversibility",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/reachlin/";
+          
+        },
+      },{id: "post-optimization-ii",
         
           title: "Optimization II",
         
