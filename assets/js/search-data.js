@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-time-reversibility",
+        },{id: "post-imitation-learning",
+        
+          title: "Imitation Learning",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/imit/";
+          
+        },
+      },{id: "post-time-reversibility",
         
           title: "Time Reversibility",
         
