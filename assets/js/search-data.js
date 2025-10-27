@@ -34,6 +34,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/imit/";
           
         },
+      },{id: "post-exploting-chaos-for-learning",
+        
+          title: "Exploting chaos for learning",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/chaos/";
+          
+        },
       },{id: "post-time-reversibility",
         
           title: "Time Reversibility",
