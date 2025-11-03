@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-imitation-learning",
+        },{id: "post-nonlinear-dynamics-and-control-i",
+        
+          title: "Nonlinear Dynamics and Control I",
+        
+        description: "One Dimensional Flows",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/nld/";
+          
+        },
+      },{id: "post-imitation-learning",
         
           title: "Imitation Learning",
         
