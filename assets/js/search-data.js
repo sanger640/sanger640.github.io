@@ -45,9 +45,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/imit/";
           
         },
-      },{id: "post-exploting-chaos-for-learning",
+      },{id: "post-exploiting-chaos-for-learning",
         
-          title: "Exploting chaos for learning",
+          title: "Exploiting chaos for learning",
         
         description: "",
         section: "Posts",
