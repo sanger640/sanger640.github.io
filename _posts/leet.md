@@ -206,3 +206,53 @@ At scale, performance determines if software is usable
 - Embedded systems: limited RAM
 - Server apps
 - Mobile apps
+
+# Arrays:
+- Collection of elements stored in contiguous memory locations; meaning they sit side by side in the computer's memory
+- Elements stored sequentially (4 bytes aprt for 32 bit int)
+- Zero-based indexing: first element at index 0
+  - Address calculation: address = base + (index x element_size)
+- **O(1) direct access**, key insight
+- CPU cache for nearby data loaded
+- Reading and updating are O(1) constant time operations.
+  
+## Iteration
+- Linear serach (linear iteration, for loop)
+  - start at i = 0, check iterate until found
+  - -1 if none
+- Visit each element one by one
+- O(n) linear time operation
+- Tasks: summing, searching
+- Array not sorted so can't skip
+
+## Adding/Removing elements at the end
+- Adding to end, append/push O(1) operation
+  - nothing to move, update length
+- Common pattern is to start with empty array and build it by appending
+  - Each append is O(1)
+  - no need to specify size
+  - total time for n appends, O(n)
+- Removing from end: called pop
+  - O(1), no element to shift
+
+
+## Adding/Removing from Middle
+- Much slower: elements must shift
+- Middle operations O(n):
+  - Insert/Delete: must shift elements right (insert), left (delete)
+- Insert (shift right):
+  - start from end and work back
+  - shift each by one to right
+  - continue till i, and place new element at i
+  - update arrays length
+  - n-i number of shifts
+- Delete (shift left):
+  - remove element at i
+  - shift each element after i one pose to left
+  - continue until end 
+  - update array's length
+  - n-i-1 (number of shifts)
+- Alternative for deletions:
+  - **swap with last element, then pop**
+- if freq insert/delete, use linked list
+- to maintain order, use end of array 
