@@ -3,8 +3,8 @@ layout: distill
 title: Data Structures and Algorithms Crash Course
 date: 2025-05-02
 description: 
-tags:
-categories:
+tags: algorithms
+categories: algorithms
 related_posts: false
 
 bibliography: paper.bib
@@ -256,3 +256,77 @@ At scale, performance determines if software is usable
   - **swap with last element, then pop**
 - if freq insert/delete, use linked list
 - to maintain order, use end of array 
+
+## Dynamic Arrays
+- Trad arrays need a specified size, if that size is reached, you must allocate a new array and copy everything over manulaly
+- Modern languages have dynamic arrays:
+  - List in python
+  - Vector in C++
+- Dyn Array maintians two seperate value: size (current numer of ele) and capacity (number of slots allocated in memory).
+  - Empty dyn array will allocate 4 ele cap
+  - When reach cap, it will choose a memory block with double cap and copy everything over.
+  - **Doubling capacity each time**
+  - 4->8->16->32->64
+  - Why doubling each time?
+    - Amortized
+    - Copying takes O(n) time
+    - If resize every append, n elements require O(n^2) ops.
+    - With doubling, resize happens at power of 2.
+    - For n appends, total copy work is O(n). Total append work are O(n), fiving O(n) total time for n operations.
+    - Divide by n and you get O(1) per operation on average.
+    - This is called **amortized O(1)** time.
+    - W**hile a single append might trigger an expensive O(n) resize, most appends take O(1). Averaged out, each append costs O(1).**
+- **Memory tradeoff:** use more memory than strictly necessary.Right after resize you are at 50% full.
+  - For most apps, acceptable. But for memory efficency switch to trad arrays if needed.
+
+# Strings
+- Array of chars
+- Strings live in the heap (like arrays)
+- When var created, that var holds a reference pointing to the actual char data stored in heap memory.
+
+## Indexing
+- Zero Indexing
+- Works just like array indexing
+
+## Iteration
+- used for counting chars, validate format, transform, search patterns.
+- same as array iteration
+
+## Concactenation
+- join mulltiple strings in one
+- '%+' opearator to concatenate
+- or use append()
+- strings are immutable, concatenating creates new string object each time.
+- .reserve(num_elements) to avoid relocation when appending.
+
+## Comparison
+- equality test: same chars in same sequence
+- lexigraphical comparioson (position based)
+
+## String Methods
+- .find("phrase");
+- substr(i1, i2);
+- .replace(string_arr, index, phrase);
+- .length(); .size(); .empty();
+
+## Immutability
+- strings are immutable: cannot be changed after they are created.
+- modification creates a new string instead
+- Python enforces string immutablity
+- C++ allows mutable strings. std::string supports direct char assignment
+  - make copy if you want to preserve
+
+## Character Counting
+- Uses hash maps (or arrays) to track how many times each char appears in a string.
+  - Iterate through string once, update counts as you go
+  - Create a map from char to frequency
+  - Use unordered maps
+- Used in anagram detection (compares two freq maps for equality)
+  - Finding dupes if any count exceeds one
+  - Char validation verifies req chars are there
+  - Pattern matching
+- Transforms strings into struct data for analyis
+  - iterate once through string
+- O(n) time to build a map
+  - O(1) lookups for each char frequency
+  
