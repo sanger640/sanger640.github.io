@@ -330,3 +330,81 @@ At scale, performance determines if software is usable
 - O(n) time to build a map
   - O(1) lookups for each char frequency
   
+# Linked List
+- To insert in an array at certain pose, need to move everythin to the right of it by 1. Max n operations
+- Linked Lists scatter elements throughout memory and connect them through pointers
+  - No continuous blocks
+  - Easy to insert O(1)
+- Linked List is made of:
+  - Nodes: contains the data and the pointer to next node
+  - Must follow the chain to iterate, cannot jump
+  - Starts with head pointer (points to first node), each node points to next node in sequnce.
+  - Last node points to nothing (represented as null pointer), marks end of the list.
+- **Inserting:** create new node, point it to the node after it, change previous node's pointer to point to the new node. Same for deletion. O(1)
+- **Accessing:** Linked list requires traversal to access at an index unlike array. O(N) complexity for Linked List for accessing.
+- Array optimize for access speed, linked list optimize for modification flexibility.
+  
+## Nodes and Pointers
+- Node is a simple struct of data and pointer
+  
+```cpp
+struct Node {
+    int data;
+    Node* next;
+
+    Node(int data) : data(data), next(nullptr) {}
+};
+
+// Create a node with data = 5
+Node* node = new Node(5);
+cout << node->data << endl;  // 5
+cout << node->next << endl;  // 0 (nullptr)
+
+// Create two nodes
+Node* first = new Node(10);
+Node* second = new Node(20);
+
+// Link first to second
+first->next = second;
+
+// Now: first -> second -> nullptr
+cout << first->data << endl;         // 10
+cout << first->next->data << endl;   // 20
+cout << second->next << endl;        // 0 (nullptr)
+```
+## Traverse O(N)
+```cpp
+void traverse(Node* head) {
+    Node* current = head;
+    while (current != nullptr) {
+        cout << current->data << endl;
+        current = current->next;
+    }
+}
+```
+- Binary search does not work on LinkList
+
+## Insert
+- At head easy O(1), at tail have to traverse the entire list; if no tail pointer.
+  - With tail pointer O(1)
+  - Implementations like queues: maintain a tail pointer.
+
+## Deletion
+- Skip over unwanted nodes, disconnect from chain. change the pointer of the previous node to the next node.
+- C++ requires explicit memory deallocation (delete head)
+- Edge cases matter: empty list (nothing to delete), single node then return null, target not found, return original head, multiple occurance, do only first one (or remove early return).
+- O(n) for delete by val, search dominates complexity
+- O(1) delete at head
+
+## Linked List vs Array
+- Arrays for jumping around random positions (binary search, mat ops)
+- Insert at begin: linked list O(1)
+  - Stack or undo ops
+- Insert at end: arrays with extra cap win O(1) dyn array, linked list need a tail pointer else O(n)
+- Insert middle: both O(n), traversal kills linkedlist, inserting by itself is O(1).
+- Deletion (mirrors insertion)
+- Both pretty much O(n), for value based
+- Search: O(n) for unsorted data, arrays can be sorted for bin search O(log n), sorted ll are still O(n)
+- Mem Usage: array is contig (heavy stack memory but faster access due to RAM cache), ll is scatt mem easier on memory (slower RAM access,)
+  - sequential travel array faster (even tho both O(n)) due to RAM cache or overhead
+- Linked list good for complex structures: trees, graphs, node based designs
