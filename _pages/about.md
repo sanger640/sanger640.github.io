@@ -28,11 +28,11 @@ Hey there! I'm Alikasim (Ali for short), and welcome to my personal site/portfol
 
 A bit about me:
 
-I am currently a Masters student in the department of Mechanical Engineering at University of Waterloo researching robot manipulation through contact
+I am currently a Masters student in the department of Mechanical Engineering at University of Waterloo researching robot manipulation through contact under the supervision of [Dr. Soo Jeon](https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/soojeon). 
 
 During my bachelors and internships, I have worked on numerous robotics projects for various sectors like nuclear, agriculture and additive manufacturing.
 You can find out more about it in my resume on this site!
 
-If you have questions, or would like to connect or colloborate, feel free to reach me on linkedin or by email.
+If you have questions, or would like to connect or colloborate, feel free to reach me on LinkedIn or by email.
 
 Enjoy your stay!
