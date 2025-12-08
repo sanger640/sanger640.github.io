@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/resume/";
           },
-        },{id: "post-nonlinear-dynamics-and-control-i",
+        },{id: "post-model-agnostic-meta-learning-for-fast-adaption-of-deep-networks",
+        
+          title: "Model-Agnostic Meta-Learning for Fast Adaption of Deep Networks",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/maml/";
+          
+        },
+      },{id: "post-nonlinear-dynamics-and-control-i",
         
           title: "Nonlinear Dynamics and Control I",
         
@@ -160,6 +171,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/safe/";
+          
+        },
+      },{id: "post-data-structures-and-algorithms-crash-course",
+        
+          title: "Data Structures and Algorithms Crash Course",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/leet/";
           
         },
       },{id: "post-optimal-control-overview",
