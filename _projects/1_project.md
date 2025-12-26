@@ -1,12 +1,43 @@
 ---
 layout: page
-title: project 1
+title: Diffusion Policy
 description: with background image
 img: assets/img/12.jpg
 importance: 1
 category: work
 related_publications: true
 ---
+
+- Intro , goal of the presentation
+- Data Collection and Teleoperation
+  - Setup (w/ image)
+  - Repo Link
+  - Script (pose controller)
+  - deadband filter needed, safety constraints; polymetis
+  - webapp for vr
+- Training
+  - Diff Policy mod repo
+  - Current storage of data
+  - Zarr Implementation
+  - Dataloader.py, task.yaml, workspace.yaml
+  - Usual training params: 300 epochs, 8hrs ish, 3090 Ti good enough
+- Deployment:
+  - Server-Client Arch
+  - How it works?
+  - Asynch arch
+  - Smoothing obs
+- Tasks:
+  - Pick and Place Task
+  - Video
+  - Observations: adapatable to different configs, sometimes fails due to occlusion or motors overheating, etc.
+- Common Pitfalls
+  - Smoothing
+  - Stuttering during teleoperation
+  - VR Tape Trick
+  - 
+
+
+
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
