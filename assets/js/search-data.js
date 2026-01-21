@@ -253,7 +253,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-vr-teleop-and-diffusion-policy",
           title: 'VR Teleop and Diffusion Policy',
-          description: "Github repo to implement the teleoperation and diffusion policy deployment.",
+          description: "Data Collection via VR Teleop + Diffusion Policy Depolyment Architecture",
           section: "Projects",handler: () => {
               window.location.href = "/projects/diffusion_policy/";
             },},{
