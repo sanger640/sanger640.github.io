@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/resume/";
           },
-        },{id: "post-model-agnostic-meta-learning-for-fast-adaption-of-deep-networks",
+        },{id: "post-robot-manipulator-control",
+        
+          title: "Robot Manipulator Control",
+        
+        description: "Position control, velocity control, force control, and WTF is impedance?",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/impd/";
+          
+        },
+      },{id: "post-model-agnostic-meta-learning-for-fast-adaption-of-deep-networks",
         
           title: "Model-Agnostic Meta-Learning for Fast Adaption of Deep Networks",
         
