@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="460" fill="#ffffff"/>
+  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">DINO-WM — Dual-Camera Latent World Model</text>
+  <text x="400" y="64" text-anchor="middle" font-size="13" fill="#6b6b6b">Jenga block-extraction task, planning in latent space</text>
+
+  <g fill="#eef2fa" stroke="#3a5a8f" stroke-width="1.5">
+    <rect x="30" y="110" width="160" height="50" rx="8"/>
+    <rect x="30" y="175" width="160" height="50" rx="8"/>
+    <rect x="30" y="240" width="160" height="50" rx="8"/>
+  </g>
+  <g font-size="13.5" text-anchor="middle" fill="#1a1a1a">
+    <text x="110" y="139">Front camera</text>
+    <text x="110" y="204">Wrist camera</text>
+    <text x="110" y="269">Proprioception</text>
+  </g>
+
+  <g fill="#eef5ee" stroke="#3a6b3a" stroke-width="1.5">
+    <rect x="250" y="150" width="170" height="70" rx="10"/>
+  </g>
+  <text x="335" y="180" text-anchor="middle" font-size="14" fill="#1a1a1a">DINOv2 encoder</text>
+  <text x="335" y="198" text-anchor="middle" font-size="13" fill="#1a1a1a">(frozen features)</text>
+
+  <g fill="#f5eefa" stroke="#6b3a8f" stroke-width="1.5">
+    <rect x="470" y="150" width="180" height="70" rx="10"/>
+  </g>
+  <text x="560" y="176" text-anchor="middle" font-size="14" fill="#1a1a1a">Predictor + dual</text>
+  <text x="560" y="194" text-anchor="middle" font-size="14" fill="#1a1a1a">decoder/safety heads</text>
+
+  <g fill="#fbf3ea" stroke="#8a5a1a" stroke-width="1.5">
+    <rect x="690" y="150" width="90" height="70" rx="10"/>
+  </g>
+  <text x="735" y="180" text-anchor="middle" font-size="13" fill="#1a1a1a">CEM /</text>
+  <text x="735" y="198" text-anchor="middle" font-size="13" fill="#1a1a1a">MPPI plan</text>
+
+  <g stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#arrow3)">
+    <path d="M190 135 L250 175"/>
+    <path d="M190 200 L250 185"/>
+    <path d="M190 265 L250 210"/>
+    <path d="M420 185 L470 185"/>
+    <path d="M650 185 L690 185"/>
+  </g>
+  <path d="M735 220 C 735 300, 335 300, 335 230" stroke="#9a9a9a" stroke-width="1.5" fill="none" stroke-dasharray="4 4" marker-end="url(#arrow3)"/>
+  <text x="500" y="290" text-anchor="middle" font-size="12" fill="#8a8a8a">latent rollout re-planned each step, executed on the arm</text>
+
+  <g fill="#fdf6ec" stroke="#b08a3a" stroke-width="1.2">
+    <rect x="60" y="345" width="680" height="70" rx="8"/>
+  </g>
+  <text x="400" y="368" text-anchor="middle" font-size="13.5" fill="#1a1a1a">LMDB data pipeline (single/full/sharded) &#8594; multi-GPU distributed training</text>
+  <text x="400" y="388" text-anchor="middle" font-size="13.5" fill="#1a1a1a">4&#215;H100 SLURM jobs on Digital Research Alliance clusters (Nibi / Narval / Rorqual)</text>
+
+  <defs>
+    <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#9a9a9a"/>
+    </marker>
+  </defs>
+</svg>

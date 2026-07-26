@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="420" fill="#ffffff"/>
+  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">Diffusion Policy — Real-Robot Serving Loop</text>
+  <text x="400" y="64" text-anchor="middle" font-size="13" fill="#6b6b6b">Franka Panda, dual-camera cup manipulation</text>
+
+  <g fill="#eef2fa" stroke="#3a5a8f" stroke-width="1.5">
+    <rect x="40" y="110" width="170" height="60" rx="8"/>
+    <rect x="40" y="190" width="170" height="60" rx="8"/>
+  </g>
+  <g font-size="14" text-anchor="middle" fill="#1a1a1a">
+    <text x="125" y="135">Front camera</text>
+    <text x="125" y="153">RGB obs</text>
+    <text x="125" y="215">Wrist camera</text>
+    <text x="125" y="233">RGB obs</text>
+  </g>
+
+  <g fill="#f5eefa" stroke="#6b3a8f" stroke-width="1.5">
+    <rect x="290" y="150" width="200" height="80" rx="10"/>
+  </g>
+  <g font-size="14" text-anchor="middle" fill="#1a1a1a">
+    <text x="390" y="180">Diffusion Policy</text>
+    <text x="390" y="200">(dual-cam encoder +</text>
+    <text x="390" y="218">denoising action head)</text>
+  </g>
+
+  <g fill="#fbf3ea" stroke="#8a5a1a" stroke-width="1.5">
+    <rect x="570" y="90" width="190" height="50" rx="8"/>
+    <rect x="570" y="200" width="190" height="60" rx="8"/>
+  </g>
+  <g font-size="14" text-anchor="middle" fill="#1a1a1a">
+    <text x="665" y="120">diff_server.py</text>
+    <text x="665" y="228">Franka Panda</text>
+    <text x="665" y="246">executes action chunk</text>
+  </g>
+
+  <g stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#arrow2)">
+    <path d="M210 140 L290 175"/>
+    <path d="M210 220 L290 205"/>
+    <path d="M490 190 L570 190"/>
+  </g>
+  <path d="M665 140 L665 200" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M665 260 C 665 320, 390 320, 390 230" stroke="#9a9a9a" stroke-width="1.5" fill="none" stroke-dasharray="4 4" marker-end="url(#arrow2)"/>
+  <text x="500" y="315" text-anchor="middle" font-size="12" fill="#8a8a8a">closed loop, re-observe after each action chunk</text>
+
+  <text x="400" y="390" text-anchor="middle" font-size="12.5" fill="#8a8a8a">Trained on real teleop demonstrations &#183; served over a persistent client-server link for low-latency inference</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#9a9a9a"/>
+    </marker>
+  </defs>
+</svg>
