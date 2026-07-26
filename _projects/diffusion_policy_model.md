@@ -24,7 +24,7 @@ I forked the [original Columbia/real-stanford codebase](https://github.com/real-
 
 ## How it works
 
-- Human teleoperation demonstrations (collected via the VR teleop pipeline in [VR Teleop and Diffusion Policy](/projects/)) are converted into the Zarr dataset format the training pipeline expects.
+- Human teleoperation demonstrations (collected via the VR teleop pipeline in [VR Teleop and Diffusion Policy](/projects/panda-express/)) are converted into the Zarr dataset format the training pipeline expects.
 - A U-Net-based diffusion model is trained to denoise short action-sequence "chunks," conditioned on a short history of visual + proprioceptive observations.
 - At inference, the model runs the reverse diffusion process to sample an action chunk, executes part of it on the robot, then re-observes and re-plans — the same receding-horizon idea as MPC, but with a diffusion model instead of an optimizer in the loop.
 

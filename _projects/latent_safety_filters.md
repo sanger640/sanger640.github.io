@@ -9,7 +9,7 @@ category: research
 github: https://github.com/sanger640/dino_wm
 ---
 
-This is my main research direction under Prof. Soo Jeon's group at Waterloo, spanning three repos: [VR Teleop and Diffusion Policy](/projects/) for data collection, [Diffusion Policy](/projects/diffusion-policy/) for the manipulation policy itself, and [DINO-WM](https://github.com/sanger640/dino_wm) for the world model the safety monitor is built on.
+This is my main research direction under Prof. Soo Jeon's group at Waterloo, spanning three repos: [VR Teleop and Diffusion Policy](/projects/panda-express/) for data collection, [Diffusion Policy](/projects/diffusion-policy/) for the manipulation policy itself, and [DINO-WM](https://github.com/sanger640/dino_wm) for the world model the safety monitor is built on.
 
 ## What it is
 
@@ -40,7 +40,10 @@ The hypothesis behind this project is that this generalizes directly to manipula
 </div>
 
 1. **World model**: a DINO-WM-based model, trained on rollout data, that predicts future latent states from a history of observations and actions — letting us "imagine" the outcome of an action sequence before running it on the real robot.
-2. **Deviator Agent**: given the policy's proposed action sequence $a_{0:T}$, samples a set of N nearby, noisy action sequences $\tilde{a}_{1,0:T}, \dots, \tilde{a}_{N,0:T}$ via Gaussian perturbation.
+2. **Deviator Agent**: given the policy's proposed action sequence, generates a set of N nearby, noisy action sequences by Gaussian-perturbing it:
+
+    $$a_{0:T} \;\rightarrow\; \tilde{a}_{1,0:T}, \; \tilde{a}_{2,0:T}, \; \dots, \; \tilde{a}_{N,0:T}$$
+
 3. **Divergence Detector**: rolls the world model forward under the nominal action *and* every perturbed action, then measures how far the perturbed rollouts diverge from the nominal one. Large divergence → **failure**; small, consistent divergence → **safe**.
 
 ### Task setup
@@ -102,7 +105,7 @@ This project ties together all three of my robot-learning repos:
     </div>
 </div>
 
-- **[VR Teleop and Diffusion Policy](/projects/) (`panda_express`)**: the teleop app used to collect the demonstration dataset above, and the integration layer that runs the trained policy on the physical Franka Panda.
+- **[VR Teleop and Diffusion Policy](/projects/panda-express/) (`panda_express`)**: the teleop app used to collect the demonstration dataset above, and the integration layer that runs the trained policy on the physical Franka Panda.
 - **[Diffusion Policy](/projects/diffusion-policy/) (`diffusion_policy` fork)**: the visuomotor policy being monitored, plus the real-time serving layer that puts it in the control loop.
 - **`dino_wm` fork**: the latent world model that powers the Deviator Agent and Divergence Detector, extended to a dual-camera setup with per-camera prediction heads, and the PCA/k-means-based latent filtering I'm using to explore the ROI-filtering fix above.
 
