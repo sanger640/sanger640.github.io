@@ -1,0 +1,65 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="800" height="500" fill="#ffffff"/>
+
+  <text x="400" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">franka_ws — ROS Control Stack</text>
+  <text x="400" y="68" text-anchor="middle" font-size="14" fill="#6b6b6b">Franka Emika Panda, real-hardware teleoperation</text>
+
+  <!-- Input devices column -->
+  <text x="140" y="112" text-anchor="middle" font-size="13" font-weight="600" fill="#3a6b3a">input devices</text>
+  <g fill="#eef5ee" stroke="#3a6b3a" stroke-width="1.5">
+    <rect x="40" y="130" width="200" height="46" rx="8"/>
+    <rect x="40" y="188" width="200" height="46" rx="8"/>
+    <rect x="40" y="246" width="200" height="46" rx="8"/>
+  </g>
+  <g font-size="14" fill="#1a1a1a" text-anchor="middle">
+    <text x="140" y="158">Keyboard</text>
+    <text x="140" y="216">3Dconnexion SpaceMouse</text>
+    <text x="140" y="274">Direct Kinematics (VR-ready)</text>
+  </g>
+
+  <!-- Teleop / control nodes column -->
+  <text x="400" y="112" text-anchor="middle" font-size="13" font-weight="600" fill="#3a5a8f">franky_control nodes</text>
+  <g fill="#eef2fa" stroke="#3a5a8f" stroke-width="1.5">
+    <rect x="300" y="130" width="200" height="46" rx="8"/>
+    <rect x="300" y="188" width="200" height="46" rx="8"/>
+    <rect x="300" y="246" width="200" height="46" rx="8"/>
+    <rect x="300" y="304" width="200" height="46" rx="8"/>
+  </g>
+  <g font-size="13.5" fill="#1a1a1a" text-anchor="middle">
+    <text x="400" y="158">keyboard_teleop</text>
+    <text x="400" y="216">spacemouse_teleop</text>
+    <text x="400" y="274">dk_teleop + ik</text>
+    <text x="400" y="332">jpose / joint controllers</text>
+  </g>
+
+  <!-- Arrows input -> control -->
+  <g stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M240 153 L300 153"/>
+    <path d="M240 211 L300 211"/>
+    <path d="M240 269 L300 269"/>
+  </g>
+
+  <!-- Robot column -->
+  <text x="660" y="112" text-anchor="middle" font-size="13" font-weight="600" fill="#8a5a1a">hardware</text>
+  <g fill="#fbf3ea" stroke="#8a5a1a" stroke-width="1.5">
+    <rect x="580" y="170" width="160" height="70" rx="10"/>
+    <rect x="580" y="260" width="160" height="46" rx="8"/>
+  </g>
+  <g font-size="14" fill="#1a1a1a" text-anchor="middle">
+    <text x="660" y="200">Franka Panda</text>
+    <text x="660" y="220">7-DOF arm</text>
+    <text x="660" y="288">Gripper</text>
+  </g>
+
+  <!-- Arrows control -> robot -->
+  <path d="M500 200 L580 205" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M500 283 L580 283" stroke="#9a9a9a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <text x="400" y="410" text-anchor="middle" font-size="12.5" fill="#8a8a8a">Dockerized ROS workspace &#183; MoveIt / Gazebo sim + real-robot launch files</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#9a9a9a"/>
+    </marker>
+  </defs>
+</svg>

@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "Simulation, control, and learning projects in robot manipulation — impedance control, motion planning, and reinforcement learning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
