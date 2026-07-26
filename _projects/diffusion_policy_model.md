@@ -4,7 +4,7 @@ title: Diffusion Policy for Real-Robot Manipulation
 description: Adapting Diffusion Policy to dual-camera Franka Panda manipulation, with a real-time serving architecture for closed-loop control
 permalink: /projects/diffusion-policy/
 img: assets/img/diffusion_policy_arch.svg
-importance: 2
+importance: 3
 category: research
 github: https://github.com/sanger640/diffusion_policy
 ---
