@@ -15,6 +15,13 @@ github: https://github.com/sanger640/diffusion_policy
 
 I forked the [original Columbia/real-stanford codebase](https://github.com/real-stanford/diffusion_policy) — built and benchmarked around simulated tasks like PushT — to train and deploy it on our lab's Franka Panda arm for a real, contact-rich pick-and-place task.
 
+<div class="d-flex flex-column align-items-center mt-3">
+    {% include figure.liquid loading="eager" path="assets/img/diffusion_policy_arch.svg" class="img-fluid rounded z-depth-1" zoomable=true %}
+    <div class="caption mt-2" style="max-width: 100%; text-align: center;">
+        Serving architecture: dual-camera observations flow into the diffusion policy, which is queried by the robot's control loop over a persistent connection for closed-loop execution.
+    </div>
+</div>
+
 ## How it works
 
 - Human teleoperation demonstrations (collected via the VR teleop pipeline in [VR Teleop and Diffusion Policy](/projects/)) are converted into the Zarr dataset format the training pipeline expects.
@@ -30,6 +37,8 @@ Starting from a codebase built for single-camera simulated benchmarks, I adapted
 - **Real-robot inference**: since the original repo only evaluates in simulated gym environments, I wrote a `inference.py` script plus a "dummy" env runner (`dummy_runner.py`, `eval_dummy.py`) so the trained policy could be rolled out and evaluated directly on hardware instead of in a simulator.
 - **Model serving**: built `diff_server.py` / `diff_server_dual.py`, a lightweight client-server layer that hosts the trained policy on a GPU machine and serves action predictions to the robot's control loop in real time, decoupling training/inference hardware from the robot's control computer.
 
-<div class="caption">
-    Serving architecture: dual-camera observations flow into the diffusion policy, which is queried by the robot's control loop over a persistent connection for closed-loop execution.
-</div>
+## Code
+
+The full fork, including the dual-camera task configs, real-robot inference scripts, and serving code described above, is available on GitHub:
+
+[github.com/sanger640/diffusion_policy](https://github.com/sanger640/diffusion_policy)
