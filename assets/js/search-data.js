@@ -267,6 +267,26 @@ ninja.data = [{
           description: "Data Collection via VR Teleop + Diffusion Policy Depolyment Architecture",
           section: "Projects",handler: () => {
               window.location.href = "/projects/diffusion_policy/";
+            },},{id: "projects-franka-panda-ros-workspace",
+          title: 'Franka Panda ROS Workspace',
+          description: "ROS control stack for a real Franka Panda — joint and Cartesian controllers plus keyboard, SpaceMouse, and direct-kinematics teleoperation nodes",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/franka_ws/";
+            },},{id: "projects-chaos-aware-sensitivity-analysis-of-rl-policies",
+          title: 'Chaos-Aware Sensitivity Analysis of RL Policies',
+          description: "Using Finite-Time Lyapunov Exponents to analyze the sensitivity of SAC/PPO policies trained on a sparse-reward pendulum swing-up task",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ftle_pendulum/";
+            },},{id: "projects-cartesian-impedance-control-for-franka-panda",
+          title: 'Cartesian Impedance Control for Franka Panda',
+          description: "Null-space projected Cartesian impedance controller for a 7-DOF Franka Panda, simulated in MuJoCo with Pinocchio for kinematics/dynamics",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/impedance_controller/";
+            },},{id: "projects-lqr-trees-for-feedback-motion-planning",
+          title: 'LQR-Trees for Feedback Motion Planning',
+          description: "Lyapunov funnels and sums-of-squares programming to build regions of attraction and stabilize trajectories on a sparse randomized tree",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lqr_trees/";
             },},{
         id: 'social-email',
         title: 'email',
