@@ -272,11 +272,6 @@ ninja.data = [{
           description: "Adapting Diffusion Policy to dual-camera Franka Panda manipulation, with a real-time serving architecture for closed-loop control",
           section: "Projects",handler: () => {
               window.location.href = "/projects/diffusion-policy/";
-            },},{id: "projects-dino-wm-latent-world-models-for-contact-rich-manipulation",
-          title: 'DINO-WM: Latent World Models for Contact-Rich Manipulation',
-          description: "Scaling a DINOv2-based world model to dual-camera Jenga manipulation, with a latent safety-filter head and multi-GPU cluster training",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/dino-wm/";
             },},{id: "projects-chaos-aware-sensitivity-analysis-of-rl-policies",
           title: 'Chaos-Aware Sensitivity Analysis of RL Policies',
           description: "Using Finite-Time Lyapunov Exponents to analyze the sensitivity of SAC/PPO policies trained on a sparse-reward pendulum swing-up task",
@@ -287,6 +282,11 @@ ninja.data = [{
           description: "Null-space projected Cartesian impedance controller for a 7-DOF Franka Panda, simulated in MuJoCo with Pinocchio for kinematics/dynamics",
           section: "Projects",handler: () => {
               window.location.href = "/projects/impedance_controller/";
+            },},{id: "projects-latent-safety-filters-a-stability-centric-safety-monitor-for-manipulation",
+          title: 'Latent Safety Filters: A Stability-Centric Safety Monitor for Manipulation',
+          description: "A label-free safety monitor that flags unsafe actions from a learned manipulation policy before they execute, by checking the stability of a learned world model&#39;s rollouts",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/latent-safety-filters/";
             },},{id: "projects-lqr-trees-for-feedback-motion-planning",
           title: 'LQR-Trees for Feedback Motion Planning',
           description: "Lyapunov funnels and sums-of-squares programming to build regions of attraction and stabilize trajectories on a sparse randomized tree",
