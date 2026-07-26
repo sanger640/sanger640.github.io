@@ -267,11 +267,16 @@ ninja.data = [{
           description: "Data Collection via VR Teleop + Diffusion Policy Depolyment Architecture",
           section: "Projects",handler: () => {
               window.location.href = "/projects/diffusion_policy/";
-            },},{id: "projects-franka-panda-ros-workspace",
-          title: 'Franka Panda ROS Workspace',
-          description: "ROS control stack for a real Franka Panda — joint and Cartesian controllers plus keyboard, SpaceMouse, and direct-kinematics teleoperation nodes",
+            },},{id: "projects-diffusion-policy-for-real-robot-manipulation",
+          title: 'Diffusion Policy for Real-Robot Manipulation',
+          description: "Adapting Diffusion Policy to dual-camera Franka Panda manipulation, with a real-time serving architecture for closed-loop control",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/franka_ws/";
+              window.location.href = "/projects/diffusion-policy/";
+            },},{id: "projects-dino-wm-latent-world-models-for-contact-rich-manipulation",
+          title: 'DINO-WM: Latent World Models for Contact-Rich Manipulation',
+          description: "Scaling a DINOv2-based world model to dual-camera Jenga manipulation, with a latent safety-filter head and multi-GPU cluster training",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dino-wm/";
             },},{id: "projects-chaos-aware-sensitivity-analysis-of-rl-policies",
           title: 'Chaos-Aware Sensitivity Analysis of RL Policies',
           description: "Using Finite-Time Lyapunov Exponents to analyze the sensitivity of SAC/PPO policies trained on a sparse-reward pendulum swing-up task",
