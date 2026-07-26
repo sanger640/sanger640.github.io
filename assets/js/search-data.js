@@ -264,9 +264,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-vr-teleop-and-diffusion-policy",
           title: 'VR Teleop and Diffusion Policy',
-          description: "Data Collection via VR Teleop + Diffusion Policy Depolyment Architecture",
+          description: "Meta Quest 3 Pro teleoperation for a Franka Panda, feeding a demonstration pipeline that trains and deploys a real diffusion policy",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/diffusion_policy/";
+              window.location.href = "/projects/panda-express/";
             },},{id: "projects-diffusion-policy-for-real-robot-manipulation",
           title: 'Diffusion Policy for Real-Robot Manipulation',
           description: "Adapting Diffusion Policy to dual-camera Franka Panda manipulation, with a real-time serving architecture for closed-loop control",
@@ -276,12 +276,12 @@ ninja.data = [{
           title: 'Chaos-Aware Sensitivity Analysis of RL Policies',
           description: "Using Finite-Time Lyapunov Exponents to analyze the sensitivity of SAC/PPO policies trained on a sparse-reward pendulum swing-up task",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/ftle_pendulum/";
+              window.location.href = "/projects/ftle-pendulum/";
             },},{id: "projects-cartesian-impedance-control-for-franka-panda",
           title: 'Cartesian Impedance Control for Franka Panda',
           description: "Null-space projected Cartesian impedance controller for a 7-DOF Franka Panda, simulated in MuJoCo with Pinocchio for kinematics/dynamics",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/impedance_controller/";
+              window.location.href = "/projects/impedance-controller/";
             },},{id: "projects-latent-safety-filters-a-stability-centric-safety-monitor-for-manipulation",
           title: 'Latent Safety Filters: A Stability-Centric Safety Monitor for Manipulation',
           description: "A label-free safety monitor that flags unsafe actions from a learned manipulation policy before they execute, by checking the stability of a learned world model&#39;s rollouts",
@@ -291,7 +291,7 @@ ninja.data = [{
           title: 'LQR-Trees for Feedback Motion Planning',
           description: "Lyapunov funnels and sums-of-squares programming to build regions of attraction and stabilize trajectories on a sparse randomized tree",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/lqr_trees/";
+              window.location.href = "/projects/lqr-trees/";
             },},{
         id: 'social-email',
         title: 'email',
