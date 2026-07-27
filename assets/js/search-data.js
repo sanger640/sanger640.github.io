@@ -262,9 +262,9 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-vr-teleop-and-diffusion-policy",
-          title: 'VR Teleop and Diffusion Policy',
-          description: "Meta Quest 3 Pro teleoperation for a Franka Panda, feeding a demonstration pipeline that trains and deploys a real diffusion policy",
+          section: "News",},{id: "projects-vr-teleop-data-collection-for-franka-panda",
+          title: 'VR Teleop Data Collection for Franka Panda',
+          description: "Meta Quest 3 Pro teleoperation for a real Franka Panda, built to collect the demonstrations that train downstream manipulation policies",
           section: "Projects",handler: () => {
               window.location.href = "/projects/panda-express/";
             },},{id: "projects-diffusion-policy-for-real-robot-manipulation",
