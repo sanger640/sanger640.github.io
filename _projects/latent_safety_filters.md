@@ -9,7 +9,7 @@ category: research
 github: https://github.com/sanger640/dino_wm
 ---
 
-This is my main research direction under Prof. Soo Jeon's group at Waterloo, spanning three repos: [VR Teleop and Diffusion Policy](/projects/panda-express/) for data collection, [Diffusion Policy](/projects/diffusion-policy/) for the manipulation policy itself, and [DINO-WM](https://github.com/sanger640/dino_wm) for the world model the safety monitor is built on.
+This is my main research direction under Prof. Soo Jeon's group at Waterloo, spanning three repos: [VR Teleop Data Collection](/projects/panda-express/), [Diffusion Policy](/projects/diffusion-policy/) for the manipulation policy itself, and [DINO-WM](https://github.com/sanger640/dino_wm) for the world model the safety monitor is built on.
 
 ## What it is
 
@@ -105,7 +105,7 @@ This project ties together all three of my robot-learning repos:
     </div>
 </div>
 
-- **[VR Teleop and Diffusion Policy](/projects/panda-express/) (`panda_express`)**: the teleop app used to collect the demonstration dataset above, and the integration layer that runs the trained policy on the physical Franka Panda.
+- **[VR Teleop Data Collection](/projects/panda-express/) (`panda_express`)**: the teleop app used to collect the demonstration dataset above, and the integration layer that runs the trained policy on the physical Franka Panda.
 - **[Diffusion Policy](/projects/diffusion-policy/) (`diffusion_policy` fork)**: the visuomotor policy being monitored, plus the real-time serving layer that puts it in the control loop.
 - **`dino_wm` fork**: the latent world model that powers the Deviator Agent and Divergence Detector, extended to a dual-camera setup with per-camera prediction heads, and the PCA/k-means-based latent filtering I'm using to explore the ROI-filtering fix above.
 

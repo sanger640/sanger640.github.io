@@ -24,9 +24,29 @@ I forked the [original Columbia/real-stanford codebase](https://github.com/real-
 
 ## How it works
 
-- Human teleoperation demonstrations (collected via the VR teleop pipeline in [VR Teleop and Diffusion Policy](/projects/panda-express/)) are converted into the Zarr dataset format the training pipeline expects.
+- Human teleoperation demonstrations (collected via the VR teleop pipeline in [VR Teleop Data Collection](/projects/panda-express/)) are converted into the Zarr dataset format the training pipeline expects.
 - A U-Net-based diffusion model is trained to denoise short action-sequence "chunks," conditioned on a short history of visual + proprioceptive observations.
 - At inference, the model runs the reverse diffusion process to sample an action chunk, executes part of it on the robot, then re-observes and re-plans — the same receding-horizon idea as MPC, but with a diffusion model instead of an optimizer in the loop.
+
+## In action
+
+<div class="d-flex flex-column align-items-center mt-3">
+    <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
+        <source src="{{ 'assets/video/diffusion_policy_cup_demo.mp4' | relative_url }}" type="video/mp4">
+    </video>
+    <div class="caption mt-2" style="max-width: 100%; text-align: center;">
+        The trained policy executing a pick-and-place rollout on the real arm.
+    </div>
+</div>
+
+<div class="d-flex flex-column align-items-center mt-3">
+    <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
+        <source src="{{ 'assets/video/diffusion_policy_move_cup_demo.mp4' | relative_url }}" type="video/mp4">
+    </video>
+    <div class="caption mt-2" style="max-width: 100%; text-align: center;">
+        A second rollout, moving the mug to a different target location.
+    </div>
+</div>
 
 ## My contributions
 

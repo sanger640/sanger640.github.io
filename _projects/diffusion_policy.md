@@ -1,7 +1,7 @@
 ---
 layout: page
-title: VR Teleop and Diffusion Policy
-description: Meta Quest 3 Pro teleoperation for a Franka Panda, feeding a demonstration pipeline that trains and deploys a real diffusion policy
+title: VR Teleop Data Collection for Franka Panda
+description: Meta Quest 3 Pro teleoperation for a real Franka Panda, built to collect the demonstrations that train downstream manipulation policies
 permalink: /projects/panda-express/
 img: assets/img/diff_policy_setup.jpg
 importance: 1
@@ -18,14 +18,13 @@ github: https://github.com/sanger640/panda_express
 
 ## What it is
 
-This is the data-collection and deployment backbone behind my [Diffusion Policy](/projects/diffusion-policy/) and [Latent Safety Filters](/projects/latent-safety-filters/) work: a VR teleoperation system for a real Franka Panda arm, built to make collecting good demonstrations fast enough that training a diffusion policy on real (not simulated) data is actually practical.
+This is the data-collection backbone behind my [Diffusion Policy](/projects/diffusion-policy/) and [Latent Safety Filters](/projects/latent-safety-filters/) work: a VR teleoperation system for a real Franka Panda arm, built to make collecting good demonstrations fast enough that training a policy on real (not simulated) data is actually practical.
 
 ## How it works
 
 - **Teleoperation**: a Meta Quest 3 Pro controller drives the arm in real time — controller pose maps to end-effector Cartesian commands, sent to the robot via [Polymetis](https://github.com/facebookresearch/fairo/tree/main/polymetis) for realtime control. A browser page (`quest_controller.html`) hosted from the robot machine streams controller pose and button state from the headset itself, so no extra tracking hardware is needed.
 - **Recording**: each demonstration ("episode") logs end-effector pose and gripper state at 10 Hz, alongside synchronized RGB frames from both cameras at 30 Hz, direct to an SSD mounted on the robot machine.
-- **Dataset conversion**: recorded episodes are converted into the Zarr format the [Diffusion Policy](/projects/diffusion-policy/) training pipeline consumes.
-- **Deployment**: trained policies are hosted on a separate GPU server; the robot computer acts as a client, sending observations and receiving actions over a persistent connection at 10 Hz — the same client-server pattern used for the safety-monitor work.
+- **Dataset conversion**: recorded episodes are converted into the Zarr format the [Diffusion Policy](/projects/diffusion-policy/) training pipeline consumes, which also covers how the resulting policy gets deployed back onto this same arm.
 
 <div class="d-flex flex-column align-items-center mt-3">
     <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
@@ -41,15 +40,6 @@ This is the data-collection and deployment backbone behind my [Diffusion Policy]
 - **Arm**: Franka Emika Panda, controlled via Polymetis for low-latency Cartesian control.
 - **Cameras**: two Intel RealSense D435s — one external, one wrist-mounted — for the dual-view observations the policy is trained on.
 - **Compute split**: a dedicated robot-control machine runs the teleop/recording/client code, while training and inference run on a separate GPU machine, kept in sync over the network.
-
-<div class="d-flex flex-column align-items-center mt-3">
-    <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 8px;">
-        <source src="{{ 'assets/video/panda_express_policy_demo.mp4' | relative_url }}" type="video/mp4">
-    </video>
-    <div class="caption mt-2" style="max-width: 100%; text-align: center;">
-        The trained diffusion policy executing a pick-and-place rollout, closing the loop from demonstration to deployment.
-    </div>
-</div>
 
 ## Notable engineering details
 

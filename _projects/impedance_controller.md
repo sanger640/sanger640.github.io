@@ -3,7 +3,7 @@ layout: page
 title: Cartesian Impedance Control for Franka Panda
 description: Null-space projected Cartesian impedance controller for a 7-DOF Franka Panda, simulated in MuJoCo with Pinocchio for kinematics/dynamics
 permalink: /projects/impedance-controller/
-img: assets/img/impedance_controller.png
+img: assets/img/impedance_controller_thumb.png
 importance: 4
 category: research
 github: https://github.com/sanger640/impedance_controller
