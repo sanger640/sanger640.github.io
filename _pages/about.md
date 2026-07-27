@@ -28,11 +28,11 @@ Hey there! I'm Alikasim (Ali for short), and welcome to my personal site/portfol
 
 A bit about me:
 
-I am currently a Masters student in the department of Mechanical Engineering at University of Waterloo researching robot manipulation through contact under the supervision of [Dr. Soo Jeon](https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/soojeon). 
+I am currently a Masters student in the department of Mechanical Engineering at University of Waterloo researching robot manipulation through contact under the supervision of [Dr. Soo Jeon](https://uwaterloo.ca/mechanical-mechatronics-engineering/profile/soojeon). Most of my current work is on making learned manipulation policies (like diffusion policies) safer to deploy on real hardware — I build safety monitors that use a learned world model to flag unsafe actions before they execute, without needing any labelled failure data. You can see that and my other robotics/controls projects on the [projects page](/projects/), and I write up deeper technical dives on [the blog](/blog/).
 
 During my bachelors and internships, I have worked on numerous robotics projects for various sectors like nuclear, agriculture and additive manufacturing.
 You can find out more about it in my resume on this site!
 
-If you have questions, or would like to connect or colloborate, feel free to reach me on LinkedIn or by email.
+If you have questions, or would like to connect or collaborate, feel free to reach me on LinkedIn or by email.
 
 Enjoy your stay!
