@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="560" fill="#ffffff"/>
+
+  <text x="450" y="52" text-anchor="middle" font-size="26" font-weight="700" fill="#1a1a1a">Cartesian Impedance Control</text>
+  <text x="450" y="80" text-anchor="middle" font-size="15" fill="#6b6b6b">the end-effector behaves like a virtual spring-damper toward its target</text>
+
+  <!-- Ground -->
+  <rect x="80" y="475" width="740" height="10" fill="#dcdcdc"/>
+
+  <!-- Arm base -->
+  <circle cx="200" cy="475" r="16" fill="#8a8a8a"/>
+
+  <!-- Link 1 -->
+  <line x1="200" y1="475" x2="400" y2="315" stroke="#4a4a4a" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="400" cy="315" r="17" fill="#8a8a8a"/>
+
+  <!-- Link 2 to end-effector -->
+  <line x1="400" y1="315" x2="560" y2="255" stroke="#4a4a4a" stroke-width="17" stroke-linecap="round"/>
+
+  <!-- End-effector -->
+  <circle cx="560" cy="255" r="14" fill="#2f2f2f"/>
+
+  <!-- Target pose (dashed ghost) -->
+  <circle cx="640" cy="185" r="13" fill="none" stroke="#3a5a8f" stroke-width="3.5" stroke-dasharray="6 5"/>
+  <text x="640" y="150" text-anchor="middle" font-size="17" font-weight="600" fill="#3a5a8f">target pose</text>
+
+  <!-- Spring between end-effector and target -->
+  <path d="M 570 245 L 583 233 L 594 253 L 605 217 L 616 247 L 627 223 L 636 193"
+        fill="none" stroke="#6b3a8f" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Damper (parallel line with box) -->
+  <line x1="560" y1="271" x2="600" y2="271" stroke="#3a6b3a" stroke-width="3"/>
+  <rect x="600" y="261" width="20" height="20" fill="none" stroke="#3a6b3a" stroke-width="3"/>
+  <line x1="620" y1="271" x2="636" y2="200" stroke="#3a6b3a" stroke-width="3"/>
+
+  <text x="700" y="220" font-size="16" fill="#6b3a8f">stiffness K</text>
+  <text x="700" y="247" font-size="16" fill="#3a6b3a">damping D</text>
+
+  <!-- External contact force -->
+  <line x1="740" y1="325" x2="600" y2="270" stroke="#b03a3a" stroke-width="3.5" marker-end="url(#arrowF)"/>
+  <text x="750" y="333" font-size="16" fill="#b03a3a">external force</text>
+
+  <text x="450" y="525" text-anchor="middle" font-size="13.5" fill="#8a8a8a">contact is absorbed by compliance, not fought with high-gain position control</text>
+
+  <defs>
+    <marker id="arrowF" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#b03a3a"/>
+    </marker>
+  </defs>
+</svg>

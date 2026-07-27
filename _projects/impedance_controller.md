@@ -3,7 +3,7 @@ layout: page
 title: Cartesian Impedance Control for Franka Panda
 description: Null-space projected Cartesian impedance controller for a 7-DOF Franka Panda, simulated in MuJoCo with Pinocchio for kinematics/dynamics
 permalink: /projects/impedance-controller/
-img: assets/img/impedance_controller_thumb.png
+img: assets/img/impedance_controller_thumb.svg
 importance: 4
 category: research
 github: https://github.com/sanger640/impedance_controller
@@ -12,6 +12,10 @@ github: https://github.com/sanger640/impedance_controller
 ## What it is
 
 A Cartesian impedance controller for a 7-DOF Franka Emika Panda, simulated in MuJoCo with [Pinocchio](https://github.com/stack-of-tasks/pinocchio) handling the kinematics and rigid-body dynamics. Rather than commanding joint positions directly, the controller makes the end-effector behave like a virtual spring-damper toward a target pose — letting the arm comply with unexpected contact instead of fighting it, which matters for any task where contact is expected (as opposed to purely free-space motion).
+
+<div class="d-flex flex-column align-items-center mt-3">
+    {% include figure.liquid loading="eager" path="assets/img/impedance_controller_thumb.svg" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
 
 ## How it works
 
