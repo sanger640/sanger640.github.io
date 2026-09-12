@@ -5,7 +5,7 @@ permalink: /projects/
 description: Simulation, control, and learning projects in robot manipulation — impedance control, motion planning, and reinforcement learning.
 nav: true
 nav_order: 3
-display_categories: [research]
+display_categories: [research, design]
 horizontal: false
 ---
 
