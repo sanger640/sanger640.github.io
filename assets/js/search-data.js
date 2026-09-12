@@ -294,7 +294,7 @@ ninja.data = [{
               window.location.href = "/projects/lqr-trees/";
             },},{id: "projects-sensus-electro-tactile-braille-interface",
           title: 'Sensus: Electro-Tactile Braille Interface',
-          description: "A glove-worn haptic interface that renders braille on the fingertip through electro-tactile stimulation, for people with dual sensory loss",
+          description: "A wearable interface that renders braille on the fingertip through electro-tactile stimulation, giving people with dual sensory loss passive access to text",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sensus/";
             },},{
