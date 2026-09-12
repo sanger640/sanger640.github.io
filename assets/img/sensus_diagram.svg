@@ -1,0 +1,62 @@
+<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="420" fill="#ffffff"/>
+
+  <text x="450" y="44" text-anchor="middle" font-size="23" font-weight="700" fill="#1a1a1a">Sensus — Electro-Tactile Braille Interface</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13.5" fill="#6b6b6b">rendering braille on the fingertip, without moving parts</text>
+
+  <!-- Source -->
+  <g fill="#eef2fa" stroke="#3a5a8f" stroke-width="1.5">
+    <rect x="35" y="150" width="165" height="70" rx="9"/>
+  </g>
+  <text x="117" y="178" text-anchor="middle" font-size="13.5" fill="#1a1a1a">Smart device text</text>
+  <text x="117" y="197" text-anchor="middle" font-size="13.5" fill="#1a1a1a">book, message, media</text>
+
+  <!-- Encoding + control -->
+  <g fill="#f5eefa" stroke="#6b3a8f" stroke-width="1.5">
+    <rect x="255" y="150" width="180" height="70" rx="9"/>
+  </g>
+  <text x="345" y="178" text-anchor="middle" font-size="13.5" fill="#1a1a1a">Braille encoding +</text>
+  <text x="345" y="197" text-anchor="middle" font-size="13.5" fill="#1a1a1a">amplitude control</text>
+
+  <!-- Stimulation driver -->
+  <g fill="#eef5ee" stroke="#3a6b3a" stroke-width="1.5">
+    <rect x="490" y="150" width="175" height="70" rx="9"/>
+  </g>
+  <text x="577" y="178" text-anchor="middle" font-size="13.5" fill="#1a1a1a">AC electro-tactile</text>
+  <text x="577" y="197" text-anchor="middle" font-size="13.5" fill="#1a1a1a">stimulation driver</text>
+
+  <!-- Fingertip electrode array -->
+  <g fill="#fbf3ea" stroke="#8a5a1a" stroke-width="1.5">
+    <rect x="720" y="132" width="145" height="106" rx="12"/>
+  </g>
+  <text x="792" y="158" text-anchor="middle" font-size="13.5" fill="#1a1a1a">Fingertip array</text>
+  <!-- braille cell dots -->
+  <g fill="#8a5a1a">
+    <circle cx="772" cy="182" r="6"/>
+    <circle cx="772" cy="203" r="6"/>
+    <circle cx="772" cy="224" r="6"/>
+    <circle cx="812" cy="182" r="6"/>
+  </g>
+  <g fill="none" stroke="#c9a06a" stroke-width="1.5">
+    <circle cx="812" cy="203" r="6"/>
+    <circle cx="812" cy="224" r="6"/>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#9a9a9a" stroke-width="1.6" fill="none" marker-end="url(#a)">
+    <path d="M200 185 L255 185"/>
+    <path d="M435 185 L490 185"/>
+    <path d="M665 185 L720 185"/>
+  </g>
+
+  <text x="345" y="270" text-anchor="middle" font-size="12.5" fill="#8a8a8a">amplitude sets perceived roughness, tuned to each user's comfort</text>
+  <text x="792" y="270" text-anchor="middle" font-size="12.5" fill="#8a8a8a">no actuators to move</text>
+
+  <text x="450" y="350" text-anchor="middle" font-size="13" fill="#6b6b6b">Passive, portable access to text while the hands stay free for other tasks.</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#9a9a9a"/>
+    </marker>
+  </defs>
+</svg>

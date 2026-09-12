@@ -292,6 +292,11 @@ ninja.data = [{
           description: "Lyapunov funnels and sums-of-squares programming to build regions of attraction and stabilize trajectories on a sparse randomized tree",
           section: "Projects",handler: () => {
               window.location.href = "/projects/lqr-trees/";
+            },},{id: "projects-sensus-electro-tactile-braille-interface",
+          title: 'Sensus: Electro-Tactile Braille Interface',
+          description: "A glove-worn haptic interface that renders braille on the fingertip through electro-tactile stimulation, for people with dual sensory loss",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sensus/";
             },},{
         id: 'social-email',
         title: 'email',
